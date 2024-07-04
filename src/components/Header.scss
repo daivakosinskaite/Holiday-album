@@ -1,0 +1,39 @@
+/* src/components/Header.scss */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #6a1b9a;
+    color: #fff;
+  
+    &__title {
+      margin: 0;
+      font-size: 24px;
+    }
+  
+    &__user-info {
+      display: flex;
+      align-items: center;
+  
+      &__email {
+        margin-right: 20px;
+        font-size: 18px;
+      }
+  
+      &__logout-button {
+        background: #ffeb3b;
+        color: #6a1b9a;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 4px;
+  
+        &:hover {
+          background: #ffd600;
+        }
+      }
+    }
+  }
+  

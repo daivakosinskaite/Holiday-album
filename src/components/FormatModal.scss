@@ -1,0 +1,113 @@
+/* src/components/FormatModal.scss */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .modal-content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      position: relative;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+  
+      h2 {
+        margin-bottom: 20px;
+        color: #6a1b9a;
+        font-family: 'Arial', sans-serif;
+      }
+  
+      .formats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+  
+        .format-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          cursor: pointer;
+  
+          .format-name {
+            margin-bottom: 5px;
+            color: #6a1b9a;
+            font-family: 'Arial', sans-serif;
+          }
+  
+          .format {
+            width: 60px;
+            height: 60px;
+            background: #f3e5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            position: relative;
+          }
+  
+          .format::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            background: #ddd;
+          }
+  
+          .circle::before {
+            border-radius: 50%;
+          }
+  
+          .two-column::before {
+            background: linear-gradient(90deg, #ddd 50%, transparent 50%);
+          }
+  
+          .four-square::before {
+            background: linear-gradient(90deg, transparent 50%, #ddd 50%), linear-gradient(transparent 50%, #ddd 50%);
+            background-size: 50% 50%;
+          }
+  
+          .single-large::before {
+            background: #ddd;
+          }
+  
+          .two-horizontal::before {
+            background: linear-gradient(transparent 50%, #ddd 50%);
+          }
+  
+          .mixed1::before {
+            background: linear-gradient(transparent 50%, #ddd 50%), linear-gradient(90deg, transparent 50%, #ddd 50%);
+          }
+  
+          .two-vertical::before {
+            background: linear-gradient(90deg, #ddd 50%, transparent 50%);
+          }
+  
+          .mixed2::before {
+            background: linear-gradient(90deg, #ddd 50%, transparent 50%), linear-gradient(transparent 50%, #ddd 50%);
+          }
+  
+          .mixed3::before {
+            background: linear-gradient(transparent 50%, #ddd 50%), linear-gradient(90deg, #ddd 50%, transparent 50%);
+          }
+        }
+      }
+    }
+  }
+  

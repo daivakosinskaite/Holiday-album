@@ -1,4 +1,4 @@
-// src/App.js
+
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
@@ -6,7 +6,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Dashboard from './components/Dashboard';
 import AlbumList from './components/AlbumList';
-import Welcome from './components/Welcome';  // Import Welcome component
+import Welcome from './components/Welcome';  
 import './App.scss';
 
 function App() {

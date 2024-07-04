@@ -1,4 +1,3 @@
-// src/components/Dashboard.jsx
 import React, { useState, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
@@ -52,7 +51,7 @@ const Dashboard = () => {
   const handleDeletePhoto = async (id) => {
     await deleteDoc(doc(db, `users/${user.uid}/albums/${albumId}/photos`, id));
     if (user) {
-      fetchPhotos(user.uid, albumId); // Atnaujinkime nuotraukas po ištrynimo
+      fetchPhotos(user.uid, albumId); 
     }
   };
 
@@ -62,7 +61,7 @@ const Dashboard = () => {
       createdAt: serverTimestamp(),
       userId: user.uid,
     });
-    fetchPhotos(user.uid, albumId); // Atnaujinkime nuotraukas po įkėlimo
+    fetchPhotos(user.uid, albumId); 
   };
 
   const changeFormat = (format) => {

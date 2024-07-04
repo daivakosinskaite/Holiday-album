@@ -1,4 +1,3 @@
-// src/components/FormatModal.jsx
 import React from 'react';
 import './FormatModal.scss';
 

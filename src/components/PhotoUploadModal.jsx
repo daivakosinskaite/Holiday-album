@@ -1,4 +1,4 @@
-// src/components/PhotoUploadModal.jsx
+
 import React, { useState } from 'react';
 import './PhotoUploadModal.scss';
 
@@ -8,7 +8,7 @@ const PhotoUploadModal = ({ show, handleClose, uploadPhoto }) => {
 
   const handleUpload = () => {
     try {
-      new URL(url); // This will throw an error if the URL is invalid
+      new URL(url); 
       uploadPhoto(url);
       setUrl('');
       setError('');

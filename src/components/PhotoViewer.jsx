@@ -1,4 +1,4 @@
-// src/components/PhotoViewer.jsx
+
 import React from 'react';
 import './PhotoViewer.scss';
 

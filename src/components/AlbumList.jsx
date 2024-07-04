@@ -1,10 +1,10 @@
-// src/components/AlbumList.jsx
+
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { getAuth } from 'firebase/auth';
 import { collection, getDocs, addDoc } from 'firebase/firestore';
 import { db } from '../firebase';
-import Header from './Header'; // Import the Header component
+import Header from './Header'; 
 import './AlbumList.scss';
 
 const AlbumList = () => {
@@ -31,7 +31,7 @@ const AlbumList = () => {
     if (newAlbumName) {
       await addDoc(collection(db, `users/${user.uid}/albums`), { name: newAlbumName });
       setNewAlbumName('');
-      window.location.reload(); // Reload to show new album
+      window.location.reload(); 
     }
   };
 

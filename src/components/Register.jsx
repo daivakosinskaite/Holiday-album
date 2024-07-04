@@ -1,4 +1,4 @@
-// src/components/Register.jsx
+
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
@@ -23,7 +23,7 @@ const Register = () => {
     e.preventDefault();
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      history.push('/albums'); // Redirect after successful registration
+      history.push('/albums'); 
     } catch (error) {
       setError(error.message);
     }

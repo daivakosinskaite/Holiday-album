@@ -1,4 +1,4 @@
-// src/components/Login.jsx
+
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
@@ -23,7 +23,7 @@ const Login = () => {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      history.push('/albums'); // Redirect after successful login
+      history.push('/albums'); 
     } catch (error) {
       setError(error.message);
     }
